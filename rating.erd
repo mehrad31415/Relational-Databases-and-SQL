@@ -1,0 +1,20 @@
+erdiagram Model
+
+notation=chen
+entity Movie {
+   mID key
+   title
+   year
+   director
+}
+
+entity Reviewer {
+   rID key
+   name
+}
+
+relationship Rating {
+   Movie [0..N] -> Reviewer [0..N]
+   stars
+   ratingDate
+}

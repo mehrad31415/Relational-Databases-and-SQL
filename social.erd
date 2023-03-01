@@ -1,14 +1,16 @@
 erdiagram Model
 
-notation=default
-entity A {
+notation=crowsfoot
+entity Highschooler {
    id key
+   name
+   grade
 }
 
-entity B {
-   id key
+relationship Friend {
+   Highschooler [0..N] -> Highschooler [0..N]
 }
 
-relationship Rel {
-   A -> B
+relationship Likes {
+   Highschooler [0..N] -> Highschooler [0..N]
 }
